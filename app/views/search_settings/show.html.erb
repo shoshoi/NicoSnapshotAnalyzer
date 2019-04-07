@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Word:</strong>
+  <%= @search_setting.word %>
+</p>
+
+<%= link_to 'Edit', edit_search_setting_path(@search_setting) %> |
+<%= link_to 'Back', search_settings_path %>

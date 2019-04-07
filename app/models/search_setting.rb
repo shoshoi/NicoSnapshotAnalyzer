@@ -1,0 +1,2 @@
+class SearchSetting < ApplicationRecord
+end

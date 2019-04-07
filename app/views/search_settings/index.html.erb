@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Search Settings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Word</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+<%= @disp.inspect.gsub(/\\n/, '<br/>') %>
+  <tbody>
+    <% @search_settings.each do |search_setting| %>
+      <tr>
+        <td><%= search_setting.word %></td>
+        <td><%= link_to 'Show', search_setting %></td>
+        <td><%= link_to 'Edit', edit_search_setting_path(search_setting) %></td>
+        <td><%= link_to 'Destroy', search_setting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Search Setting', new_search_setting_path %>

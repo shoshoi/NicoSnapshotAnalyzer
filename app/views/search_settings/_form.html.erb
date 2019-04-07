@@ -1,0 +1,22 @@
+<%= form_with(model: search_setting, local: true) do |form| %>
+  <% if search_setting.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(search_setting.errors.count, "error") %> prohibited this search_setting from being saved:</h2>
+
+      <ul>
+      <% search_setting.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :word %>
+    <%= form.text_field :word %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
